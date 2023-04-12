@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FormPessoa</string>
+    <string name="main_prompt">Digite os dados da Pessoa:</string>
+    <string name="input_nome_hint">Nome</string>
+    <string name="input_idade_hint">Idade</string>
+    <string name="sexo_prompt">Selecione a orientaçao sexual:</string>
+    <string name="radio_button_masculino">Masculino</string>
+    <string name="radio_button_feminino">Feminino</string>
+    <string name="radio_button_outro">Outro</string>
+    <string name="estilo_musical_prompt">Selecione os estilos musicais favoritos:</string>
 </resources>

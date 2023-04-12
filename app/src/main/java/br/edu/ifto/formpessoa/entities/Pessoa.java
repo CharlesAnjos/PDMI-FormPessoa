@@ -1,11 +1,12 @@
 package br.edu.ifto.formpessoa.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import br.edu.ifto.formpessoa.enums.EstiloMusical;
 import br.edu.ifto.formpessoa.enums.Sexo;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
     private String nome;
     private Integer idade;
     private Sexo sexo;

@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import br.edu.ifto.formpessoa.entities.Pessoa;
+import br.edu.ifto.formpessoa.enums.EstiloMusical;
 
 public class InfoPessoa extends AppCompatActivity {
 
@@ -20,11 +21,19 @@ public class InfoPessoa extends AppCompatActivity {
 
         TextView detalhesPessoa = findViewById(R.id.detalhesPessoa);
         detalhesPessoa.append("\n");
-        detalhesPessoa.append("Dados da Pessoa\n");
+        detalhesPessoa.append("\n");
         detalhesPessoa.append("Nome: "+pessoa.getNome()+"\n");
         detalhesPessoa.append("Idade: "+pessoa.getIdade()+" anos\n");
-        detalhesPessoa.append("Genero: "+pessoa.getSexo().toString()+"\n");
-        detalhesPessoa.append("Dados da Pessoa\n");
+        detalhesPessoa.append("Genero: "+pessoa.getSexo().toFormattedString()+"\n");
+        detalhesPessoa.append("\n");
+        detalhesPessoa.append("Estilos de Musica favoritos:\n");
+        if(pessoa.getEstilosMusicais().size() < 1) {
+            detalhesPessoa.append("Nao informado!\n");
+        } else {
+            for (EstiloMusical estiloMusical : pessoa.getEstilosMusicais()){
+                detalhesPessoa.append("- "+estiloMusical.toFormattedString()+"\n");
+            }
+        }
 
     }
 
